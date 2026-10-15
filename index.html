@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Владислав Будзинський — Портфоліо</title>
+    <!-- Підключення Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Підключення іконок FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Налаштування кольорів Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            400: '#22d3ee', // cyan-400
+                            500: '#06b6d4', // cyan-500
+                            600: '#0891b2', // cyan-600
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-slate-950 text-slate-300 font-sans antialiased selection:bg-brand-500 selection:text-white min-h-screen">
+
+    <!-- Декоративний фоновий градієнт -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden -z-10 pointer-events-none">
+        <div class="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-brand-600/10 blur-[120px]"></div>
+        <div class="absolute top-[60%] -right-[10%] w-[40%] h-[40%] rounded-full bg-blue-600/10 blur-[120px]"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto p-4 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+
+        <!-- Ліва бокова панель (Sticky Profile) -->
+        <aside class="lg:col-span-4">
+            <div class="bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-3xl p-8 flex flex-col items-center text-center lg:sticky lg:top-8 shadow-2xl">
+                <!-- Фотографія -->
+                <div class="relative w-48 h-48 mb-6 group">
+                    <div class="absolute inset-0 bg-brand-500 rounded-full blur-md opacity-30 group-hover:opacity-60 transition-opacity duration-500"></div>
+                    <img src="profile.jpg" alt="Владислав Будзинський" class="relative w-full h-full object-cover rounded-full border-4 border-slate-800 group-hover:border-brand-500 transition-colors duration-500 z-10">
+                </div>
+
+                <h1 class="text-3xl font-bold text-white mb-2">Владислав Будзинський</h1>
+                <h2 class="text-brand-400 font-medium tracking-wide mb-6 uppercase text-sm">Software Engineer / IT Specialist</h2>
+
+                <!-- Контакти -->
+                <div class="w-full flex flex-col gap-4 text-left border-t border-slate-800 pt-6">
+                    <a href="mailto:vladislav.budzinskiy@gmail.com" class="flex items-center gap-3 hover:text-brand-400 transition-colors group">
+                        <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center group-hover:bg-brand-500/20 transition-colors"><i class="fas fa-envelope text-slate-400 group-hover:text-brand-400"></i></div>
+                        <span class="text-sm truncate">vladislav.budzinskiy@gmail.com</span>
+                    </a>
+                    <a href="tel:+380738999001" class="flex items-center gap-3 hover:text-brand-400 transition-colors group">
+                        <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center group-hover:bg-brand-500/20 transition-colors"><i class="fas fa-phone text-slate-400 group-hover:text-brand-400"></i></div>
+                        <span class="text-sm">+38073 899 90 01</span>
+                    </a>
+                    <a href="https://github.com/vlad704511" target="_blank" class="flex items-center gap-3 hover:text-brand-400 transition-colors group">
+                        <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center group-hover:bg-brand-500/20 transition-colors"><i class="fab fa-github text-slate-400 group-hover:text-brand-400 text-lg"></i></div>
+                        <span class="text-sm">github.com/vlad704511</span>
+                    </a>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center"><i class="fas fa-map-marker-alt text-slate-400"></i></div>
+                        <span class="text-sm">м. Кривий Ріг</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center"><i class="fas fa-user text-slate-400"></i></div>
+                        <span class="text-sm">22 роки, Неодружений</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Основний контент (Права частина) -->
+        <main class="lg:col-span-8 space-y-8">
+
+            <!-- Про мене -->
+            <section class="bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-3xl p-8 shadow-xl hover:border-slate-700 transition-colors">
+                <h3 class="text-2xl font-bold text-white mb-4 flex items-center gap-3"><i class="fas fa-terminal text-brand-500"></i> Про мене</h3>
+                <p class="text-slate-400 leading-relaxed">
+                    Маю страсний інтерес до новітніх технологій та домашньої техніки. Завжди готовий навчатись та розвивати свої навички у галузі інформаційних технологій.
+                    Досвіду роботи з маршрутизаторами, комутаторами, точками доступу немає, але готовий швидко навчатись.
+                    <span class="text-slate-300 font-medium">Мої особисті якості:</span> відповідальність, уважність до деталей, аналітичне мислення, орієнтація на результат.
+                </p>
+            </section>
+
+            <!-- Проект -->
+            <section class="relative overflow-hidden bg-gradient-to-br from-slate-900 to-slate-800 border border-brand-500/30 rounded-3xl p-8 shadow-2xl group hover:border-brand-500 transition-all duration-300 hover:-translate-y-1">
+                <div class="absolute -right-10 -bottom-10 opacity-10 group-hover:opacity-20 group-hover:scale-110 transition-all duration-500">
+                    <i class="fas fa-cloud-sun text-[15rem] text-brand-500"></i>
+                </div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="px-3 py-1 text-xs font-bold uppercase tracking-wider text-brand-400 bg-brand-500/10 rounded-full border border-brand-500/20">Головний проект</span>
+                    </div>
+                    <h3 class="text-3xl font-bold text-white mb-3">OmniWeather <i class="fas fa-sun text-yellow-400 ml-2 animate-pulse"></i></h3>
+                    <p class="text-slate-400 mb-8 max-w-xl">
+                        Сучасний веб-додаток для точного перегляду погодних умов. Проект демонструє мої навички роботи з веб-технологіями, інтеграцією сторонніх API та створення зручного інтерфейсу користувача.
+                    </p>
+                    <a href="https://vlad704511.github.io/OmniWeather/" target="_blank" class="inline-flex items-center gap-2 bg-brand-600 hover:bg-brand-500 text-white px-8 py-4 rounded-xl font-semibold transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:scale-105 active:scale-95">
+                        Переглянути проєкт <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Навички (Grid) -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Розробка -->
+                <div class="bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-3xl p-8 shadow-xl hover:border-slate-700 transition-colors">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3"><i class="fas fa-code text-brand-500"></i> Програмування</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-400 hover:border-brand-500/50 cursor-default transition-colors">Java</span>
+                        <span class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-400 hover:border-brand-500/50 cursor-default transition-colors">JavaScript</span>
+                        <span class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-400 hover:border-brand-500/50 cursor-default transition-colors">Node.js</span>
+                        <span class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-400 hover:border-brand-500/50 cursor-default transition-colors">Python</span>
+                        <span class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-400 hover:border-brand-500/50 cursor-default transition-colors">React.js</span>
+                        <span class="px-4 py-2 bg-slate-800 border border-slate-700 rounded-lg text-sm font-medium text-slate-300 hover:text-brand-400 hover:border-brand-500/50 cursor-default transition-colors">HTML</span>
+                    </div>
+                </div>
+
+                <!-- Системне адміністрування -->
+                <div class="bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-3xl p-8 shadow-xl hover:border-slate-700 transition-colors">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3"><i class="fas fa-server text-brand-500"></i> IT & Адміністрування</h3>
+                    <ul class="space-y-4 text-slate-400 text-sm">
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-brand-500 mt-1"></i> <span>Встановлення та налаштування ОС (Windows, Linux, iOS, Android).</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-brand-500 mt-1"></i> <span>Глибокі знання будови ПК, смартфонів, ноутбуків.</span></li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-brand-500 mt-1"></i> <span>Швидке виявлення та усунення апаратних/програмних неполадок.</span></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Освіта та Додатково -->
+            <section class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Освіта Timeline -->
+                <div class="bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-3xl p-8 shadow-xl">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3"><i class="fas fa-graduation-cap text-brand-500"></i> Освіта</h3>
+
+                    <div class="relative border-l-2 border-brand-500/30 pl-6 pb-6">
+                        <div class="absolute w-4 h-4 bg-brand-500 rounded-full -left-[9px] top-1 shadow-[0_0_10px_#06b6d4]"></div>
+                        <h4 class="text-white font-bold text-lg">ПВНЗ "Європейський університет"</h4>
+                        <p class="text-brand-400 text-sm font-medium mb-2">Інженерія програмного забезпечення (Бакалавр)</p>
+                        <p class="text-slate-500 text-sm flex items-center gap-2"><i class="far fa-calendar-alt"></i> Закінчення: 19.06.2025 | м. Київ</p>
+                    </div>
+
+                    <div class="relative border-l-2 border-transparent pl-6">
+                        <div class="absolute w-4 h-4 bg-slate-600 rounded-full -left-[9px] top-1"></div>
+                        <h4 class="text-white font-bold text-lg">Криворізький Покровський ліцей</h4>
+                        <p class="text-slate-400 text-sm font-medium mb-2">Історико-правовий факультет</p>
+                        <p class="text-slate-500 text-sm flex items-center gap-2"><i class="far fa-calendar-alt"></i> Випуск: 30.06.2021 | м. Кривий Ріг</p>
+                    </div>
+                </div>
+
+                <!-- Додатково -->
+                <div class="bg-slate-900/80 backdrop-blur-md border border-slate-800 rounded-3xl p-8 shadow-xl">
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center gap-3"><i class="fas fa-id-card text-brand-500"></i> Додаткова інформація</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center text-xl text-brand-400">
+                                <i class="fas fa-car"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white">Посвідчення водія</p>
+                                <p class="text-slate-400 text-sm">Категорії В, С (досвід >4 років)</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center text-xl text-brand-400">
+                                <i class="fas fa-passport"></i>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white">Закордонний паспорт</p>
+                                <p class="text-slate-400 text-sm">В наявності</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</body>
+</html>
